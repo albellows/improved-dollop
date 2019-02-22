@@ -7,15 +7,15 @@ angular.module('currentTemperature').component('currentTemperature', {
 
 		// These are the API URLs we need for this component
 		var $cmpnt = this;
-		var host = "https://localhost:8080/";
+		var host = "http://localhost:8080/";
 		var url = host + "sky/cloud/"+this.eci+"/temperature_store/temperatures?";
 
 		// Setup an interval function
 		this.getCurrentTemperature = function(){
 				$http.get(url).then(
 					function success(response){
-						console.log(response.data.length);
-						$cmpnt.temperature = response.data[response.data.length - 1].temperature;
+						$cmpnt.temperature = response.data[response.data.length - 1][0].temperature;
+						console.log($cmpnt.temperature);
 					},
 					function error(response){
 						$cmpnt.temperature = -1;

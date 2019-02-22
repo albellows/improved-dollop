@@ -7,7 +7,7 @@ angular.module('thresholdViolations').component('thresholdViolations', {
 
 		// These are the API URLs we need for this component
 		var _this = this;
-		var host = "https://localhost:8080/";
+		var host = "http://localhost:8080/";
 		var url = host + "sky/cloud/"+this.eci+"/temperature_store/threshold_violations?";
 
 		// Setup an interval function
@@ -18,7 +18,7 @@ angular.module('thresholdViolations').component('thresholdViolations', {
 						_this.violations = [];
 						for(i = 1; i < 10; i++){
 							if(response.data.length - i < 0) break;
-							_this.violations.push(response.data[response.data.length - i])
+							_this.violations.push(response.data[response.data.length - i][0])
 						}
 					},
 					function error(response){

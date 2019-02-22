@@ -36,9 +36,8 @@
 <div class="wovyn-sensor-dashboard-wrapper">
 	<h3>Profile Configuration</h3><br/>
 	<label>Sensor Name:</label><input type="text" name="name" ng-model="$ctrl.profile.name"/><br/>
-	<label>Location Latitude:</label><input type="number" name="latitude" ng-model="$ctrl.profile.location.latitude"/><br/>
-	<label>Location Longitude:</label><input type="number" name="longitude" ng-model="$ctrl.profile.location.longitude"/><br/>
-	<label>Contact Number:</label><input type="text" name="contact" ng-model="$ctrl.profile.contact"><br/>
+	<label>Location:</label><input type="text" name="location" ng-model="$ctrl.profile.location"/><br/>
+	<label>Contact Number:</label><input type="text" name="contact" ng-model="$ctrl.profile.number"><br/>
 	<label>Sensor Threshold:</label><input type="number" name="threshold" ng-model="$ctrl.profile.threshold"><br/>
 	<button class="wsd-button" id="buttonUpdateProfile" ng-click="$ctrl.updateProfile()">
 		Save Changes
