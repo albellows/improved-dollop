@@ -2,8 +2,15 @@
 	.current-temperature {
 		text-align: center;
 	}
+	.warning {
+		text-align: center;
+		color:red;
+	}
 </style>
 <div class="current-temperature">
 CURRENT TEMPERATURE
 <h1>{{$ctrl.temperature}}</h1>
+</div>
+<div class="warning">
+{{$ctrl.warning}}
 </div>

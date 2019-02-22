@@ -4,6 +4,7 @@ angular.module('currentTemperature').component('currentTemperature', {
 	controller: ['$http', '$interval', function currentTemperatureController($http, $interval) {
 		this.eci = "5vuhyTK9LZNBXcR6t5nMJA";
 		this.temperature = 0;
+		this.warning = null;
 
 		// These are the API URLs we need for this component
 		var $cmpnt = this;
@@ -15,10 +16,13 @@ angular.module('currentTemperature').component('currentTemperature', {
 				$http.get(url).then(
 					function success(response){
 						$cmpnt.temperature = response.data[response.data.length - 1][0].temperature;
+						$cmpnt.warning = null;
 						console.log($cmpnt.temperature);
 					},
 					function error(response){
 						$cmpnt.temperature = -1;
+						$cmpnt.warning = ("Warning: this will fail if pico-engine is not currently running on Allison's home IP address");
+						console.log($cmpnt.warning);
 				});		
 		};
 
