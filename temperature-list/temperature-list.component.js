@@ -19,6 +19,7 @@ angular.module('temperatureList').component('temperatureList', {
 						for(i = 1; i < 10; i++){
 							if(response.data.length - i < 0) break;
 							_this.temperatures.push(response.data[response.data.length - i])
+							console.log(_this.temperatures);
 						}
 					},
 					function error(response){
