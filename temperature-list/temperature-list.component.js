@@ -15,6 +15,7 @@ angular.module('temperatureList').component('temperatureList', {
 		this.getLiveTemperatures = function(){
 				$http.get(url).then(
 					function success(response){
+						console.log(url);
 						_this.temperatures = [];
 						for(i = 1; i < 10; i++){
 							if(response.data.length - i < 0) break;
