@@ -7,7 +7,7 @@ angular.module('temperatureList').component('temperatureList', {
 
 		// These are the API URLs we need for this component
 		var _this = this;
-		var host = "https://192.168.1.100:8080/";
+		var host = "https://localhost:8080/";
 		var url = host + "sky/cloud/"+this.eci+"/temperature_store/temperatures?";
 
 		// Setup an interval function
