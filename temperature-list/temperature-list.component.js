@@ -23,6 +23,7 @@ angular.module('temperatureList').component('temperatureList', {
 					},
 					function error(response){
 						_this.temperatures = [];
+						console.log("failed");
 						_this.temperatures.push({timestamp: "Fail", temperature: "Fail"})
 				});		
 		};
