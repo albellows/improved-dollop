@@ -15,6 +15,7 @@ angular.module('currentTemperature').component('currentTemperature', {
 				$http.get(url).then(
 					function success(response){
 						$cmpnt.temperature = response.data[response.data.length - 1].temperature;
+						console.log($cmpnt.temperature);
 					},
 					function error(response){
 						$cmpnt.temperature = -1;
