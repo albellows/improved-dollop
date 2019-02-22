@@ -1,0 +1,29 @@
+<style>
+	.threshold-violation-list-flex {
+		display: flex;
+		justify-content: center;
+	}
+	table.threshold-violation-list tr {
+		text-align: center;
+	}
+	h3.threshold-violation-list-header {
+		text-align: center;
+	}
+</style>
+<h3 class="threshold-violation-list-header">Threshold Violations</h3>
+<div class="threshold-violation-list-flex">
+	<table class="threshold-violation-list">
+		<thead>
+			<tr>
+				<th>Date/Time</th>
+				<th>Temperature (F)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="reading in $ctrl.violations">
+				<td>{{reading.timestamp}}</td>
+				<td>{{reading.temperature}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
