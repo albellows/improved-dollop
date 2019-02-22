@@ -21,7 +21,7 @@ angular.module('currentTemperature').component('currentTemperature', {
 					},
 					function error(response){
 						$cmpnt.temperature = -1;
-						$cmpnt.warning = ("Warning: this will fail if pico-engine is not currently running on Allison's home IP address");
+						$cmpnt.warning = ("Warning: this will fail if client is not running pico-engine from expected IP address");
 						console.log($cmpnt.warning);
 				});		
 		};
