@@ -17,7 +17,7 @@ angular.module('wovynSensorDashboard').component('wovynSensorDashboard', {
 		var _cmpnt = this;
 		
 		// Define API URLs
-		var host = "http://localhost:8080/";
+		var host = "http://192.168.1.100:8080/";
 		var profileUrl = host + "sky/cloud/"+this.eci+"/sensor_profile/profile";
 		var saveUpdatesUrl = host + "sky/event/"+this.eci+"/27/sensor/profile_updated";
 
