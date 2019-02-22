@@ -12,6 +12,7 @@ angular.module('currentTemperature').component('currentTemperature', {
 
 		// Setup an interval function
 		this.getCurrentTemperature = function(){
+			console.log("hi")
 				$http.get(url).then(
 					function success(response){
 						console.log(response.data.length);
